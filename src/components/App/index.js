@@ -1,5 +1,5 @@
 // == Import npm
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -12,21 +12,24 @@ import './styles.scss';
 
 // == Composant
 const App = () => {
+  const [myChoice, setMyChoice] = useState('');
+  const [score, setScore] = useState(0);
+
 return (
-    <>
-    <div className="app">
-    <Header />
-    <Switch>
-      <Route exact path="/">
-        <Play />
-      </Route>
-      <Route exact path="/">
-        <Game />
-      </Route>
-    </Switch>
+  <div className="app">
+    <div className="container">
+      <Header score={score} />
+      <Switch>
+        <Route exact path="/">
+          <Play setMyChoice={setMyChoice} />
+        </Route>
+        <Route path="/game">
+          <Game myChoice={myChoice} score={score} setScore={setScore} />
+        </Route>
+      </Switch>
+    </div>
+    <Footer />
   </div>
-  <Footer />
-  </>
   );
 };
 
