@@ -1,3 +1,14 @@
+@mixin icon($image,$color){
+  background-color: #fff;
+  background-image: url($image);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: $color;
+  box-shadow: inset 0px 5px 6px grey, 
+  0px 8px darken($color, 15%);
+  
+}
+
 $scissors-gradient: hsl(39, 89%, 49%);
 $paper-gradient: hsl(230, 89%, 62%);
 $rock-gradient: hsl(349, 71%, 52%);
@@ -7,4 +18,7 @@ $score-text: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);
 
 $background-gradient: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%)); 
+$image-p:'../../../images/icon-paper.svg';
+$image-s:'../../../images/icon-scissors.svg';
+$image-r:'../../../images/icon-rock.svg';
 

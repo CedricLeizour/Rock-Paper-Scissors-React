@@ -7,9 +7,13 @@ body {
   background: vars.$background-gradient;  
   text-align: center;
   box-sizing: border-box;
-  font-size: 2.5rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* 
   // or you can import your own font
