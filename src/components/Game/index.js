@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Rock from '../../../images/icon-rock.svg';
-import Paper from '../../../images/icon-paper.svg';
-import Scissors from '../../../images/icon-scissors.svg';
 
 import './styles.scss';
 
 const Game = ({ score, myChoice, setScore }) => {
   const [opponent, setOpponent] = useState('');
   const [playerWin, setPlayerWin] = useState('');
+
+  const [counter, setCounter] = useState(3);
 
   const newOpponentPick = () => {
     const choices = ['rock', 'paper', 'scissors'];
@@ -50,8 +49,13 @@ const Game = ({ score, myChoice, setScore }) => {
   };
 
   useEffect(() => {
-    Result();
-  }, [opponent]);
+    const timer = counter > 0 ? setInterval(() => {
+      setCounter(counter - 1);
+    }, 1000) : Result();
+    return () => {
+      clearInterval(timer);
+    };
+  }, [counter, opponent]);
 
   return (
     <div className="result">
@@ -86,7 +90,14 @@ const Game = ({ score, myChoice, setScore }) => {
 
       <div className="result__opponent">
         <span className="text">Opponent Choice</span>
-        <div className={`icon icon--${opponent} ${playerWin === 'lose' ? `icon icon--${opponent}--winner` : ''}`} />
+        {counter === 0 ? (
+          <div
+            className={`icon icon--${opponent} ${
+              playerWin === 'lose' ? `icon icon--${opponent}--winner` : ''}`}
+          />
+        )
+          : (<div className="counter">{counter}</div>
+          )}
       </div>
     </div>
   );
