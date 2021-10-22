@@ -7,6 +7,14 @@
   align-items: center;
   justify-content: center;
   
+  @include vars.mobile {
+    max-width: 350px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+     
+}
 
   &__you {
     display: flex;
@@ -14,12 +22,26 @@
     align-items: center;
     margin-right: 2rem;
 
+    @include vars.mobile {
+      margin-right: 0.5rem;
+      width: 100%;
+
+   }
+
     .text {
       text-transform: uppercase;
       font-size: 1.2rem;
       font-weight: 300;
       margin-bottom: 2.5rem;
+
+      @include vars.mobile {
+        font-size: 0.9rem;
+        
+          
+     }
     }
+
+    
 
     .icon {
       height: 250px;
@@ -31,6 +53,14 @@
       background-color: white;
       transition: transform 0.2s;
 
+      @include vars.mobile {
+        width: 90px;
+        height: 90px;
+        border: 9px solid;
+        padding: 15px;
+        
+          
+     }
       &--rock{
         background-image: url(../../../images/icon-rock.svg);
         background-repeat: no-repeat;
@@ -96,11 +126,25 @@
     flex-direction: column;
     margin: 1rem;
 
+    @include vars.mobile {
+      margin: 0;      
+   }
+
     .text {
       text-transform: uppercase;
       font-size: 3rem;
       font-weight: bold;
       margin-bottom: 30px;
+
+      @include vars.mobile {
+        font-size: 1.5rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        
+          
+     }
     }
 
     .play-again{
@@ -111,6 +155,12 @@
       border-radius: 5px;
       font-size: 1rem;
       color: vars.$score-text;
+
+      @include vars.mobile {
+        padding: 5px 10px;
+        font-size: 1.2rem;
+          
+     }
 
       &:hover {
         color: green;
@@ -125,6 +175,12 @@
     flex-direction: column;
     align-items: center;
     margin-left: 2rem;
+
+    @include vars.mobile {
+      margin-left: 0.5rem;
+      width: 100%;
+     
+   }
     
 
     .text {
@@ -132,6 +188,12 @@
       font-size: 1.2rem;
       font-weight: 300;
       margin-bottom: 2.5rem;
+
+      @include vars.mobile {
+        font-size: 0.9rem;
+        
+          
+     }
     }
 
     .icon {
@@ -144,6 +206,14 @@
       background-color: white;
       transition: transform 0.2s;
 
+      @include vars.mobile {
+        width: 90px;
+        height: 90px;
+        border: 9px solid;
+        padding: 15px;
+        
+          
+     }
       &--rock{
         background-image: url(../../../images/icon-rock.svg);
         background-repeat: no-repeat;
@@ -212,7 +282,12 @@
       background-color: rgba(#000000, .2);
       font-size: 8rem;
       
-
+      @include vars.mobile {
+        width: 90px;
+        height: 90px;
+        font-size: 4rem;
+          
+     }
     }
 
   }

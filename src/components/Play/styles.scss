@@ -7,19 +7,28 @@
   position: relative;
   margin-top: 50px;
 
+  @include vars.mobile {
+    max-width: 350px;
+     
+}
+  
+
   .triangle {
    position: absolute;
    align-self: center;
    margin-top: 70px;
    z-index: -1;
 
+   @include vars.mobile {
+   width: 200px;
+     
+}
   }
 
   .items {
     display: flex;
     justify-content: center;
-    width: 100%;
-    
+    width: 100%;   
 
     .icon{
       height: 170px;
@@ -31,6 +40,14 @@
       background-color: white;
       transition: transform 0.2s;
       
+      @include vars.mobile {
+       width: 100px;
+       height: 100px;
+       border: 9px solid;
+       padding: 15px;
+       
+         
+    }
 
       &:hover{
         transform: scale(1.1);
@@ -51,6 +68,12 @@
         0px 10px darken(vars.$paper-gradient, 20%);
         margin-top: 250px;
         /* transform: translateX(8rem); */
+
+        @include vars.mobile {
+          margin-top: 200px;
+          
+            
+       }
       }
 
       &--scissors{

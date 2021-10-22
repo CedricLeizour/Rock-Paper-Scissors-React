@@ -10,6 +10,11 @@
   padding: 20px;
   justify-content: space-between;
 
+  @include vars.mobile {
+    max-width: 300px;
+    align-items: center;
+    
+}
 }
 
 .text {
@@ -20,6 +25,10 @@
   align-items: flex-start;
   line-height: 2rem;
   
+  @include vars.mobile {
+    font-size: 1.5rem;
+    
+}
 }
 
 .your-score {
@@ -28,9 +37,19 @@
   color: vars.$score-text;
   border-radius: 10px;
 
+  @include vars.mobile {
+    padding: 6px 10px;
+    
+}
+
   .actual-score {
     color: vars.$dark-text;
     font-size: 3.5rem;
     font-weight: bold;
+
+    @include vars.mobile {
+      font-size: 3rem;
+      
+  }
   }
 }

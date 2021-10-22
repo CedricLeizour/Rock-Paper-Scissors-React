@@ -22,3 +22,12 @@ $image-p:'../../../images/icon-paper.svg';
 $image-s:'../../../images/icon-scissors.svg';
 $image-r:'../../../images/icon-rock.svg';
 
+$width:767px;
+
+
+@mixin mobile {
+  @media (max-width: #{$width}){
+    @content
+  }
+}
+
