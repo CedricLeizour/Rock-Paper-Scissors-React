@@ -51,7 +51,7 @@ const Game = ({ score, myChoice, setScore }) => {
   useEffect(() => {
     const timer = counter > 0 ? setInterval(() => {
       setCounter(counter - 1);
-    }, 1000) : Result();
+    }, 650) : Result();
     return () => {
       clearInterval(timer);
     };
@@ -104,12 +104,3 @@ const Game = ({ score, myChoice, setScore }) => {
 };
 
 export default Game;
-
-/* my choice:{myChoice} <br />
-Opponent choice:{opponent} <br />
-Result:
-{playerWin === 'win' && <p> 😃 You Win 😃 </p>}
-{playerWin === 'lose' && <p>😥 You Lose 😥 </p>}
-{playerWin === 'draw' && <p> 🤓 It's a draw 🤓 </p>}
-
-<Link to="/" onClick={()=> setOpponent()}> Try again </Link> */
