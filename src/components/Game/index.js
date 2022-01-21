@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './styles.scss';
@@ -101,6 +102,12 @@ const Game = ({ score, myChoice, setScore }) => {
       </div>
     </div>
   );
+};
+
+Game.propTypes = {
+  score: PropTypes.string.isRequired,
+  myChoice: PropTypes.string.isRequired,
+  setScore: PropTypes.string.isRequired,
 };
 
 export default Game;

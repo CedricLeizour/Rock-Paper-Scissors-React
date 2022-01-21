@@ -14,8 +14,8 @@ const Footer = () => {
     <>
       <footer className="footer">
         <div className="attribution">
-          <p>Challenge by<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.</p>
-          <p> Coded by <a href="https://cedricleizour.netlify.app" target="_blank">Cédric Leizour</a>.</p>
+          <p>Challenge by<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer"> Frontend Mentor</a>.</p>
+          <p> Coded by <a href="https://cedricleizour.netlify.app" target="_blank" rel="noreferrer">Cédric Leizour</a>.</p>
         </div>
         <button className="rules" type="button" onClick={toggle}>
           Rules

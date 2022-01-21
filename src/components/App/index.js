@@ -6,7 +6,6 @@ import Footer from '../Footer';
 import Game from '../Game';
 import Play from '../Play';
 
-
 // == Import
 import './styles.scss';
 
