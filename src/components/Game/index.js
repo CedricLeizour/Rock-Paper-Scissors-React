@@ -52,7 +52,7 @@ const Game = ({ score, myChoice, setScore }) => {
   useEffect(() => {
     const timer = counter > 0 ? setInterval(() => {
       setCounter(counter - 1);
-    }, 650) : Result();
+    }, 750) : Result();
     return () => {
       clearInterval(timer);
     };
