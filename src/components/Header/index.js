@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './styles.scss';
 
@@ -15,5 +16,9 @@ const Header = ({ score }) => (
     </div>
   </div>
 );
+
+Header.propTypes = {
+  score: PropTypes.string.isRequired,
+};
 
 export default Header;

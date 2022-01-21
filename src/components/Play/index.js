@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Triangle from '../../../images/bg-triangle.svg';
 import Rock from '../../../images/icon-rock.svg';
@@ -34,6 +35,10 @@ const Play = ({ setMyChoice }) => {
       </div>
     </div>
   );
+};
+
+Play.propTypes = {
+  setMyChoice: PropTypes.func.isRequired,
 };
 
 export default Play;
